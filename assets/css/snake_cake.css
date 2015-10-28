@@ -1,39 +1,215 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
   padding: 0;
   margin: 0;
+  font-family: Gloria Hallelujah;
+  position: relative;
+  overflow: hidden;
+}
+
+body:after{
+    display:none;
+    content: url('../images/head-down.png') url('../images/head-up.png')
+    url('../images/head-left.png') url('../images/head-right.png') url('../images/tail-down.png')
+    url('../images/tail-up.png') url('../images/tail-left.png') url('../images/tail-right.png')
+    url('../images/cakes.png');
+}
+
+.container {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  padding-top: 30px;
+}
+
+.container:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.container h1 {
+  width: 200px;
+  margin: 0 auto;
+  float: left;
 }
 
 .main {
-  width: 625px;
-  height: 625px;
-  border: 9px solid #ccc;
+  width: 500px;
+  height: 500px;
+  border: 9px solid #595959;
   border-radius: 5px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  transform: translate(50%, 5%);
+  background-color: #E2D4C6;
+  float: left;
+  clear: left;
+  position: relative;
 }
 
 .cell {
-  width: 25px;
-  height: 25px;
-  background-color: cornflowerblue;
-  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   float: left;
 }
 
-.snake {
-  background-color: red;
+.cake {
+  background-image: url("../images/cakes.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.cake {
-  background-color: yellow;
+.head-right {
+  background-image: url("../images/head-right.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head-left {
+  background-image: url("../images/head-left.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head-down {
+  background-image: url("../images/head-down.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head-up {
+  background-image: url("../images/head-up.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tail-right {
+  background-image: url("../images/tail-right.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tail-left {
+  background-image: url("../images/tail-left.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tail-down {
+  background-image: url("../images/tail-down.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tail-up {
+  background-image: url("../images/tail-up.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body {
+  background-color: #d24040;
+  box-sizing: border-box;
+  border: 1px solid #d24040;
+}
+
+.start {
+  float: right;
+  background-color: #d24040;
+  border: 1px solid #A83333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  font-family: Gloria Hallelujah;
+  margin: 10px 0 0 20px;
+}
+
+.start:hover {
+  cursor: pointer;
+  background-color: #BD3A3A;
+}
+
+.gameover {
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: 120px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #a83333;
+  background-color: #d24040;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+}
+
+.start-game {
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 120px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #a83333;
+  background-color: #d24040;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+}
+
+.gameover h1, .start-game h1 {
+  text-align: center;
+  float: left;
+  display: inline-block;
+  width: 100%;
+}
+
+.gameover p, .start-game p {
+  float: left;
+  clear: left;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.score-panel {
+  width: 100px;
+  height: 25px;
+  background-color: #595959;
+  border-radius: 6px;
+  padding: 5px;
+  color: white;
+  float: left;
+  clear: left;
+  font-family: Passion One;
+  line-height: 25px;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.dirs {
+  width: 40px;
+  height: 40px;
 }
