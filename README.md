@@ -3,6 +3,8 @@
 A quirky spin off of the traditional game of Snake fully playable through the keyboard.
 [Live version!](www.hyungccho.com/snakecake)
 
+![Snakecake](/screenshot.png)
+
 ##Snake
 
 The snake holds an array of positions, and a queue of directions. When a user hits a directional key, it checks to see if this direction is valid, and adds it to the queue if there are two or less elements in the queue.
